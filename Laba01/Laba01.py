@@ -66,10 +66,10 @@ what = input('Вивести список до файлу?(y/n)\n')
 if what == 'y':
     outputlisttofile(list)
     print('Дякую за те, що скористалися даною програмою. Для виходу натисніть Enter')
-    print()
+    input()
 else:
     print('Дякую за те, що скористалися даною програмою. Для виходу натисніть Enter')
-    print()  
+    input()  
 
 
 
