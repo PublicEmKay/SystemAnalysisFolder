@@ -3,14 +3,15 @@
 #Відкриття файлу input.txt для читання
 adress = "/home/emkay/Документи/SystemAnalysisFolder/Laba01/input.txt"
 
-#Дізнаємося кількість рядків в файлі
-lines = 0
-with open(adress) as f:
-    for line in f:
-        lines = lines + 1
-print(lines)
+#Створення списку
+list = []
 
-#Кількість стовбчиків статична та стандартна
-column = 4
 #Читання інформації з файлу
+with open(adress,'r') as f:
+    for line in f:
+        lines = []
+        for word in line.split():
+            lines.append(word)
+        list.append(lines)
+
 
