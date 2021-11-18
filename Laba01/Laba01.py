@@ -1,7 +1,7 @@
 
 
 #Відкриття файлу input.txt для читання
-adress = "/home/emkay/Документи/SystemAnalysisFolder/Laba01/input.txt"
+#adress = "/home/emkay/Документи/SystemAnalysisFolder/Laba01/input.txt"
 
 #Метод повертає вкладений список з файлу
 def listinput(adress):
@@ -48,11 +48,9 @@ def outputlist(list):
 #Метод виводить вкладений список до файлу
 def outputlisttofile(list):
     n = input('Вкажіть повну адресу файлу для запису:\n')
-    file = open(n, 'w')
-    for i in range(len(list)):
-        for j in range(len(list[i])):
-            file.write(list[i][j], + ' ')
-        file.write('\n')
+    with open(n, "w") as file:
+        print(*list, file=file, sep="\n")
+        #file.write(",".join(map(str, list))+"\n")
 
 adress = userinputfile()
 list = listinput(adress)
@@ -66,7 +64,7 @@ outputlist(list)
 
 what = input('Вивести список до файлу?(y/n)\n')
 if what == 'y':
-    #outputlisttofile(list)
+    outputlisttofile(list)
     print('Дякую за те, що скористалися даною програмою. Для виходу натисніть Enter')
     print()
 else:
