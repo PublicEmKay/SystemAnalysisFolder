@@ -45,17 +45,15 @@ def outputlist(list):
             print(list[i][j], end = ' ')
         print()
 
-#Цей метод повертає відсортований список
-def sortlist(list, methodsort, sortreverse):
-    listresult = list.sort(key=lambda i: i[methodsort], reverse=sortreverse)
-    return listresult
 adress = userinputfile()
 list = listinput(adress)
 outputlist(list)
 methodsort = userinput()
 sortreverse = userinputsort()
-list = sortlist(list, methodsort, sortreverse)
-print(list)
+
+#Сортування списку
+list.sort(key=lambda i: i[methodsort], reverse=sortreverse)
+outputlist(list)
 
 
 
