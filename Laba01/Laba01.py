@@ -45,6 +45,14 @@ def outputlist(list):
             print(list[i][j], end = ' ')
         print()
 
+#Метод виводить вкладений список до файлу
+def outputlisttofile(list):
+    n = input('Вкажіть повну адресу файлу для запису:\n')
+    file = open(n, 'w')
+    for i in range(len(list)):
+        for j in range(len(list[i])):
+            file.write(list[i][j], end = ' ')
+        file.write('\n')
 adress = userinputfile()
 list = listinput(adress)
 outputlist(list)
