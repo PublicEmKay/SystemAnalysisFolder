@@ -1,12 +1,9 @@
-class Input(object):
+from Laba01.Input import Input
+
+
+class List(Input):
     def __init__(self):
-        """Constructors"""
-        self.adress
-    
-    #Метод повертає адресу файлу
-    def userinputfile(self):
-        n = input('Вкажіть повну адресу файлу для сортування:\n')
-        self.adress = n
+        self.list
 
     #Метод повертає вкладений список з файлу
     def listinput(self):
@@ -21,4 +18,10 @@ class Input(object):
                 for word in line.split():
                     lines.append(word)
                 list.append(lines)
-        return list
+        self.list = list
+    
+    #Повернути список
+    def getList(self):
+        return self.list
+        
+        
