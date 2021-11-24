@@ -3,6 +3,7 @@ from Laba01.Input import Input
 
 class List(Input):
     def __init__(self):
+        """Constructors"""
         self.list
 
     #Метод повертає вкладений список з файлу
@@ -23,5 +24,5 @@ class List(Input):
     #Повернути список
     def getList(self):
         return self.list
-        
+
         
