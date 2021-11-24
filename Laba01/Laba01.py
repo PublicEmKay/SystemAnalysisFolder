@@ -1,6 +1,6 @@
-from Laba01.List import List
-from Laba01.Sorting import Sorting
-from Laba01.Output import Output
+import List
+import Sorting
+import Output
 
 #Відкриття файлу input.txt для читання
 #adress = "/home/emkay/Документи/SystemAnalysisFolder/Laba01/input.txt"
